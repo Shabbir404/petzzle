@@ -11,3 +11,9 @@
     font-family: "Fira Sans", sans-serif;
     font-style: normal;
 }
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}

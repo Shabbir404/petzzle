@@ -1,5 +1,6 @@
 import dogInHand from '../src/images/dogInHand.jpeg'
 import dogEat from '../src/images/dogEat.jpeg'
+import HThirdLayer from './HThirdLayer';
 
 const HSecondLayer = () => {
 
@@ -34,27 +35,30 @@ const HSecondLayer = () => {
 
     return (
         <div>
-            <div>
-                <div className='flex justify-center'>
+            <div className='md:w-10/12 mx-auto w-full'>
+                <div className='flex justify-center '>
                     <div className=''>
                         <p className='font-bold italic text-center mt-10 text-[#FA6C41]'>Trending Products</p>
                         <h1 className='text-3xl font-light mt-2'>Latest Products</h1>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2  md:grid-cols-5  md:gap-10 mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-10 mb-10 mx-auto px-4">
                     {allProducts.map((product, i) => (
-                        <div key={i} className="p-4  w-[247.58999633789062px] hover:scale-105 duration-200 cursor-pointer">
+                        <div key={i} className="p-4 w-full max-w-[247.59px] mx-auto hover:scale-105 duration-200 cursor-pointer">
                             {/* Image */}
-                            <img src={product.image} alt=""
-                                className=" mt-8 object-cover md:rounded-none rounded-md" />
+                            <img
+                                src={product.image}
+                                alt=""
+                                className="w-full h-auto  md:mt-8 object-cover md:rounded-none rounded-md"
+                            />
 
                             {/* Title */}
-                            <h1 className="font-semibold mt-4 md:text-start text-center text-lg">{product.title}</h1>
+                            <h1 className="font-semibold mt-4 text-center md:text-start text-lg">{product.title}</h1>
 
                             {/* Price */}
-                            <div className="mt-4 md:text-start md:mt-10 text-center">
-                                <span className="text-[#FA6C41]  ">{product.price}</span>
+                            <div className="mt-4 text-center md:text-start md:mt-10">
+                                <span className="text-[#FA6C41]">{product.price}</span>
                             </div>
                         </div>
                     ))}
@@ -63,9 +67,9 @@ const HSecondLayer = () => {
                 <div className='mb-10'>
                     <div className='md:flex gap-8 '>
                         <div className='reletive'>
-                            <div className='absolute mt-10 ml-10'>
+                            <div className='absolute mt-4 md:mt-10 ml-10'>
                                 <h1 className='font-bold italic'>Exclusive offers!</h1>
-                                <h1 className='md:mt-6 mt-4 font-light w-[200px] text-xl md:text-4xl md:w-[291px]'>We Care & Share
+                                <h1 className='md:mt-6  font-light w-[200px] text-xl md:text-4xl md:w-[291px]'>We Care & Share
                                     Love For Pets</h1>
                                 <button className='btn hover:bg-gray-800 bg-black md:mt-10 mt-3 rounded-full border-0 text-white'>Shop now</button>
                             </div>
@@ -73,9 +77,9 @@ const HSecondLayer = () => {
                         </div>
 
                         <div className='md:mt-0 mt-4 reletive'>
-                            <div className='absolute mt-10 ml-10'>
+                            <div className='absolute mt-4 md:mt-10 ml-10'>
                                 <h1 className='font-bold text-white italic'>Summer Sale!</h1>
-                                <h1 className='md:mt-6 mt-4
+                                <h1 className='md:mt-6
                                  font-light w-[200px] text-xl 
                                  md:text-4xl md:w-[291px] text-white'>We Care & Share
                                     Love For Pets</h1>
@@ -87,10 +91,10 @@ const HSecondLayer = () => {
                     </div>
                 </div>
 
-                <div>
+            </div>
 
-                </div>
-
+            <div>
+                <HThirdLayer></HThirdLayer>
             </div>
         </div>
     );

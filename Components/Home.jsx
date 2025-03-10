@@ -117,9 +117,9 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div>
-                    <HSecondLayer></HSecondLayer>
-                </div>
+            </div>
+            <div>
+                <HSecondLayer></HSecondLayer>
             </div>
         </div>
     );
