@@ -16,18 +16,18 @@ const Header = () => {
 
     return (
         <div>
-            <div>
-                <header className="">
+            <div className=''>
+                <header className="fixed top-0 z-10 w-full">
                     {/* Promotions only for pc  */}
-                    <div className="bg-[#FA6C41] hidden md:block text-white py-2 px-4  text-sm">
-                        <div className='flex justify-between w-10/12 mx-auto'>
+                    <div className="bg-[#FA6C41]  hidden md:block text-white py-2 px-4 text-sm">
+                        <div className='flex justify-between  w-10/12 mx-auto'>
                             <div className=''>
                                 <p className='mt-2'>Get 15% Discount + FREE surprise gift on your first order</p>
                             </div>
 
                             {/* Top navigation */}
-                            <div className='hidden  md:block '>
-                                <div className=" py-2 px-4 text-sm space-x-6">
+                            <div className='hidden md:block'>
+                                <div className="py-2 px-4 text-sm space-x-6">
                                     <a href="#about" className="hover:underline transition-colors duration-200">About Us</a>
                                     <a href="#contact" className="hover:underline transition-colors duration-200">Contact Us</a>
                                     <a href="#blog" className="hover:underline transition-colors duration-200">Blog</a>
@@ -35,19 +35,18 @@ const Header = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     {/* desktop navigation */}
-                    <div className="bg-white  shadow-md">
-                        <div className=' md:w-10/12 mx-auto px-4 py-3 flex items-center justify-between'>
+                    <div className="bg-white shadow-md">
+                        <div className='md:w-10/12 mx-auto px-4 py-3 flex items-center justify-between'>
                             {/* Logo */}
                             <div className="flex items-center">
                                 <div className="mr-2">
                                     <img
                                         src={logo}
                                         alt="Petzzle Logo"
-                                        className=" w-[162px] h-[45px]"
+                                        className="w-[162px] h-[45px]"
                                     />
                                 </div>
                             </div>
