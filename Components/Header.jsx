@@ -18,7 +18,7 @@ const Header = () => {
         <div>
             <div>
                 <header className="">
-                    {/* Promo  */}
+                    {/* Promotions only for pc  */}
                     <div className="bg-[#FA6C41] hidden md:block text-white py-2 px-4  text-sm">
                         <div className='flex justify-between w-10/12 mx-auto'>
                             <div className=''>
@@ -73,25 +73,24 @@ const Header = () => {
                                 <a href="#elements" className="font-bold hover:text-orange-500 transition-colors duration-200">Elements</a>
                             </nav>
 
-                            {/* Right Section - Search, Account, Favorites, Cart */}
+                            {/* Right Section */}
                             <div className="flex items-center space-x-4">
-                                {/* Search */}
+
                                 <button className="hover:text-orange-500 transition-colors duration-200">
                                     <IoIosSearch className='text-2xl'></IoIosSearch>
                                 </button>
 
-                                {/* Account */}
+
                                 <button className="hover:text-orange-500 transition-colors duration-200 ">
                                     <IoPersonOutline className='text-2xl'></IoPersonOutline>
                                 </button>
 
-                                {/* Favorites */}
+
                                 <button className="relative hover:text-orange-500 transition-colors duration-200 hidden md:block">
                                     <CiHeart className='text-3xl mt-0.5'></CiHeart>
                                     <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
                                 </button>
 
-                                {/* Cart */}
                                 <button className="relative hover:text-orange-500 transition-colors duration-200">
                                     <IoBagOutline className='text-2xl'></IoBagOutline>
                                     <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">4</span>
