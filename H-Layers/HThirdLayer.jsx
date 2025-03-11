@@ -1,69 +1,29 @@
+import { useEffect, useState } from 'react';
 import bgR from '../src/images/bgR.png'
 import catDogImg from '../src/images/cat&dog.jpeg'
 import HForthLayer from './HForthLayer';
 
 const HThirdLayer = () => {
 
-    const allProducts = [
-        {
-            image: '../src/images/firstPack.png',
-            title: 'Carrot Dog Food',
-            quantity: 9
-        },
-        {
-            image: '../src/images/secondPack.png',
-            title: 'Pet Food Bowls',
-            quantity: 10
-        },
-        {
-            image: '../src/images/thirdPack.png',
-            title: 'Pet Clothes',
-            quantity: 10
-        },
-        {
-            image: '../src/images/forthPack.png',
-            title: 'Pets Soft Toys',
-            quantity: 7
-        },
-        {
-            image: '../src/images/fifthPack.png',
-            title: 'Pet Backpack',
-            quantity: 6
-        },
-        {
-            image: '../src/images/sixthPack.png',
-            title: 'Bedding & Litter',
-            quantity: 2
-        }
-    ];
+    const [allProducts, setAllProfucts] = useState([]);
+    const [Products, setProducts] = useState([])
 
-    const Products = [
-        {
-            image: '../src/images/firstP.jpeg',
-            title: 'Pedigree Adult Dry Dog Food, 1kg Pack',
-            price: '$12 – $38'
-        },
-        {
-            image: '../src/images/secondP.jpeg',
-            title: 'Dentastix Oral Care Treats for Small Breed Adult Dogs',
-            price: '$11'
-        },
-        {
-            image: '../src/images/thirdP.jpeg',
-            title: 'Meat Up Puppy Dry Dog Food, Chicken',
-            price: '$15 – $28'
-        },
-        {
-            image: '../src/images/forthP.jpeg',
-            title: 'Pets Empire Stainless Steel Dog Bowl (Set of 2)',
-            price: '$30'
-        },
-        {
-            image: '../src/images/fifthP.jpeg',
-            title: 'Mutt of Course Sniffing Around Bandana Small',
-            price: '$12'
-        }
-    ];
+    useEffect(() => {
+
+        fetch('https://raw.githubusercontent.com/Shabbir404/petzzle/refs/heads/main/Jsons/All_profuct.json')
+            .then(res => res.json())
+            .then(data => setAllProfucts(data)
+            )
+
+    }, [])
+
+
+    useEffect(() => {
+        fetch('https://raw.githubusercontent.com/Shabbir404/petzzle/refs/heads/main/Jsons/Product.json')
+            .then(res => res.json())
+            .then(data => setProducts(data)
+            )
+    }, [])
 
     return (
         <div>
@@ -88,6 +48,7 @@ const HThirdLayer = () => {
                                     </div>
                                 ))
                             }
+
                         </div>
                         <img src={bgR} alt="" />
                         <div className='hidden md:block'>
@@ -102,6 +63,7 @@ const HThirdLayer = () => {
                         <div className='w-10/12 flex mx-auto'>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2
                              gap-4 md:gap-10  mb-10 mx-auto px-4">
+
                                 {Products.slice(0, 4).map((product, i) => (
                                     <div key={i} className="hover:scale-105 duration-200 cursor-pointer">
 
@@ -114,6 +76,7 @@ const HThirdLayer = () => {
                                         </div>
                                     </div>
                                 ))}
+
                             </div>
                             <div className='-mt-36'>
                                 <img src={catDogImg} alt="" />

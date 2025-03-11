@@ -1,37 +1,21 @@
 import dogInHand from '../src/images/dogInHand.jpeg'
 import dogEat from '../src/images/dogEat.jpeg'
 import HThirdLayer from './HThirdLayer';
+import { useEffect, useState } from 'react';
 
 const HSecondLayer = () => {
 
-    const allProducts = [
-        {
-            image: '../src/images/firstP.jpeg',
-            title: 'Pedigree Adult Dry Dog Food, 1kg Pack',
-            price: '$12 – $38'
-        },
-        {
-            image: '../src/images/secondP.jpeg',
-            title: 'Dentastix Oral Care Treats for Small Breed Adult Dogs',
-            price: '$11'
-        },
-        {
-            image: '../src/images/thirdP.jpeg',
-            title: 'Meat Up Puppy Dry Dog Food, Chicken',
-            price: '$15 – $28'
-        },
-        {
-            image: '../src/images/forthP.jpeg',
-            title: 'Pets Empire Stainless Steel Dog Bowl (Set of 2)',
-            price: '$30'
-        },
-        {
-            image: '../src/images/fifthP.jpeg',
-            title: 'Mutt of Course Sniffing Around Bandana Small',
-            price: '$12'
-        }
-    ];
 
+    const [allProducts, setAllProfucts] = useState([]);
+
+    useEffect(() => {
+
+        fetch('https://raw.githubusercontent.com/Shabbir404/petzzle/refs/heads/main/Jsons/All_profuct.json')
+            .then(res => res.json())
+            .then(data => setAllProfucts(data)
+            )
+
+    }, [])
 
     return (
         <div>
