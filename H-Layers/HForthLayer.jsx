@@ -1,9 +1,10 @@
 import bannerImg from '../src/images/banner.jpeg'
+import HFirftLayer from './HFirftLayer';
 
 const HForthLayer = () => {
     return (
         <div>
-            <div className="-mt-52 md:mt-20 ">
+            <div className="-mt-52 md:mt-20 mb-16">
                 <div className='reletive'>
                     <div className='absolute md:w-[445px] right-0 p-2 md:p-0 mt-2 md:mt-16'>
                         <h1 className='text-white italic font-semibold textarea-md md:text-3xl'>Summer Sale!</h1>
@@ -17,6 +18,8 @@ const HForthLayer = () => {
                     <img className='w-full' src={bannerImg} alt="" />
                 </div>
             </div>
+
+            <HFirftLayer></HFirftLayer>
         </div>
     );
 };

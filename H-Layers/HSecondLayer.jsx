@@ -5,12 +5,11 @@ import { useEffect, useState } from 'react';
 
 const HSecondLayer = () => {
 
-
     const [allProducts, setAllProfucts] = useState([]);
 
     useEffect(() => {
 
-        fetch('https://raw.githubusercontent.com/Shabbir404/petzzle/refs/heads/main/Jsons/All_profuct.json')
+        fetch('https://raw.githubusercontent.com/Shabbir404/petzzle/refs/heads/main/Jsons/LatestProducts.json')
             .then(res => res.json())
             .then(data => setAllProfucts(data)
             )
