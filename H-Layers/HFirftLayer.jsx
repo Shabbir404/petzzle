@@ -3,6 +3,7 @@ import picTwo from '../src/images/strip.jpeg'
 import picThree from '../src/images/clothes.jpeg'
 import picFour from '../src/images/multiplate.jpeg'
 import picFive from '../src/images/protine.jpeg'
+import Testimonial from './Testimonial'
 
 
 
@@ -153,6 +154,7 @@ const HFirftLayer = () => {
                     </div>
                 </div>
             </div>
+            <Testimonial></Testimonial>
         </div>
     );
 };
