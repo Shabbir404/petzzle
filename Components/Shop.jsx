@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
-import { data } from "react-router-dom";
+import { IoReorderThreeOutline } from "react-icons/io5";
 
 
 const Shop = () => {
@@ -28,13 +28,16 @@ const Shop = () => {
     }
 
 
+    // data call 
+    const [data, setData] = useState([]);
+
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/Shabbir404/petzzle/refs/heads/main/Jsons/LatestProducts.json')
             .then(res => res.json())
-            .then(data => console.log(data)
+            .then(data => setData(data)
             )
     }, [])
-
+    console.log(data)
     return (
         <div>
             <div className="md:mt-30 mt-16">
@@ -50,10 +53,12 @@ const Shop = () => {
                     </h1>
                 </div>
 
-                <div className="">
-                    <div className="flex w-11/12 md:w-10/12 mx-auto">
-                        <div className="relative lg:w-3/12">
-                            {/* Mobile filter button */}
+                <div className="w-11/12 md:w-10/12 mx-auto">
+                    {/* Main content container */}
+                    <div className="flex flex-col md:flex-row">
+                        {/* Sidebar container */}
+                        <div className="relative w-full md:w-4/12 lg:w-3/12">
+                            {/* Mobile button */}
                             <button
                                 className="md:hidden mt-3 flex items-center px-4 py-2 bg-[#FA6C41] text-white rounded mb-4"
                                 onClick={toggleSidebar}
@@ -64,9 +69,9 @@ const Shop = () => {
                                 </svg>
                             </button>
 
-                            <div className={`bg-white p-4 rounded  ${isOpen ? 'block' : 'hidden'} md:block`}>
+                            <div className={`bg-white p-4 rounded ${isOpen ? 'block' : 'hidden'} md:block`}>
                                 <div className="mb-6 border p-5 border-[#E5E5E5] rounded-md">
-                                    <h3 className="font-bold text-gray-800 flex border-b p-2 border-[#E5E5E5]  justify-between mb-2">Filter By Categories
+                                    <h3 className="font-bold text-gray-800 flex border-b p-2 border-[#E5E5E5] justify-between mb-2">Filter By Categories
                                         <TfiLayoutLineSolid onClick={handleViweOpen} className={`${viweOpen ? 'rotate-120' : ''} cursor-pointer text-xl text-gray-900`}></TfiLayoutLineSolid>
                                     </h3>
                                     <ul className={`space-y-1 ${viweOpen ? 'hidden' : ''}`}>
@@ -99,13 +104,12 @@ const Shop = () => {
                                             <label htmlFor="pet-supplies">Pet Supplies</label>
                                         </li>
                                     </ul>
-
                                 </div>
 
                                 {/* Highlight */}
                                 <div className="mb-6 border p-5 border-[#E5E5E5] rounded-md">
                                     <h3 className="flex justify-between border-b p-2 border-[#E5E5E5] font-bold text-gray-800 mb-2">Highlight
-                                        <TfiLayoutLineSolid onClick={handleViweOpenHi} className={` ${viweOpenHi ? 'rotate-120' : ''} cursor-pointer text-xl text-gray-900`}></TfiLayoutLineSolid>
+                                        <TfiLayoutLineSolid onClick={handleViweOpenHi} className={`${viweOpenHi ? 'rotate-120' : ''} cursor-pointer text-xl text-gray-900`}></TfiLayoutLineSolid>
                                     </h3>
                                     <ul className={`space-y-1 ${viweOpenHi ? 'hidden' : ''}`}>
                                         <li className="cursor-pointer text-[#FA6C41] hover:text-red-700">Discounted</li>
@@ -119,10 +123,9 @@ const Shop = () => {
                                 {/* Filter By Color */}
                                 <div className="mb-6 border p-5 border-[#E5E5E5] rounded-md">
                                     <h3 className="font-bold flex justify-between text-gray-800 mb-2">Filter By Color
-                                        <TfiLayoutLineSolid onClick={handleViweOpenCol} className={` ${viweOpenCol ? 'rotate-120' : ''} cursor-pointer text-xl text-gray-900`}></TfiLayoutLineSolid>
-
+                                        <TfiLayoutLineSolid onClick={handleViweOpenCol} className={`${viweOpenCol ? 'rotate-120' : ''} cursor-pointer text-xl text-gray-900`}></TfiLayoutLineSolid>
                                     </h3>
-                                    <div className={` ${viweOpenCol ? 'hidden' : ''} flex space-x-2`}>
+                                    <div className={`${viweOpenCol ? 'hidden' : ''} flex space-x-2`}>
                                         <div className="w-6 h-6 rounded-full bg-red-500 cursor-pointer"></div>
                                         <div className="w-6 h-6 rounded-full bg-blue-500 cursor-pointer"></div>
                                     </div>
@@ -192,14 +195,54 @@ const Shop = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-10 w-7/12">
-                            <h1>working</h1>
+
+                        {/* Main content and results area */}
+                        <div className="w-full md:w-8/12 lg:w-9/12 md:pl-4">
+                            {/* Results header section */}
+                            <div className="mt-4">
+                                <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                                    <h1 className="font-semibold tracking-wider mb-3 md:mb-0">Showing all {data.length} results</h1>
+                                    <div className="flex flex-col sm:flex-row gap-4">
+                                        <input type="text" placeholder="Default sorting" className="border-b placeholder:text-black w-full sm:w-auto" />
+                                        <div className="flex gap-2 mt-2 sm:mt-0">
+                                            <IoReorderThreeOutline className="size-8 rounded rotate-90 bg-[#FA6C41] text-white"></IoReorderThreeOutline>
+                                            <IoReorderThreeOutline className="size-8 rounded text-[#150B33] bg-[#F2F2F2]"></IoReorderThreeOutline>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-6">
+                                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                                    {data.map((profuct, i) => (
+                                        <div key={i}>
+                                            <div className="lg:w-58 lg:h-full h-88 md:h-78 lg:h-86  duration-200 lg:hover:scale-105 bg-white rounded-lg shadow-md overflow-hidden">
+                                                <div className="relative">
+                                                    <img src={profuct.image} alt="Stainless Steel Dog Bowl" className="lg:w-58 w-full  lg:h-58" />
+                                                    <div className="absolute top-2 left-2 bg-[#FA6C41] text-white text-xs font-bold p-2 rounded-full">
+                                                        14%
+                                                    </div>
+                                                </div>
+                                                <div className="p-4">
+                                                    <h3 className="font-medium text-sm mb-2">Pets Empire Stainless Steel Dog Bowl (Set Of 2)</h3>
+                                                    <div className="flex items-center justify-between">
+                                                        <div className="flex items-center gap-2">
+                                                            <span className="text-gray-400 line-through">$37</span>
+                                                            <span className="text-[#FA6C41]   text-sm">$30</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    ))}
+                                </div>
+
+                            </div>
                         </div>
-
                     </div>
-
-
                 </div>
+
             </div>
         </div>
     );
