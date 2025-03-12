@@ -9,7 +9,7 @@ const Route = () => {
         <div className='nunito'>
             <Header></Header>
             <Outlet></Outlet>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </div>
     );
 };

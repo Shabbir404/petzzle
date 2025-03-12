@@ -4,6 +4,7 @@ import { IoIosSearch } from "react-icons/io";
 import { IoPersonOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { IoBagOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -54,7 +55,7 @@ const Header = () => {
                             {/* Desktop Navigation */}
                             <nav className="hidden md:flex items-center space-x-8">
                                 <a href="#home" className="text-orange-500 font-bold hover:text-orange-700 transition-colors duration-200">Home</a>
-                                <a href="#shop" className="font-bold hover:text-orange-500 transition-colors duration-200">Shop</a>
+                                <Link to='/shop' className="font-bold hover:text-orange-500 transition-colors duration-200">Shop</Link>
                                 <div className="relative group">
                                     <a href="#categories" className="font-bold flex items-center hover:text-orange-500 transition-colors duration-200">
                                         Categories
