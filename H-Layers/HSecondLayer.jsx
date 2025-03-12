@@ -26,7 +26,7 @@ const HSecondLayer = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-10 mb-10 mx-auto px-4">
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-10 mb-10 mx-auto px-4">
                     {allProducts.map((product, i) => (
                         <div key={i} className="p-4 w-full max-w-[247.59px] mx-auto hover:scale-105 duration-200 cursor-pointer">
                             {/* Image */}
