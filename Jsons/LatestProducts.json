@@ -1,26 +1,26 @@
 [
     {
-        "image": "../src/images/firstP.jpeg",
+        "image": "https://i.ibb.co/jkNNjPXT/firstP.jpg",
         "title": "Pedigree Adult Dry Dog Food, 1kg Pack",
         "price": "$12 – $38"
     },
     {
-        "image": "../src/images/secondP.jpeg",
+        "image": "https://i.ibb.co/5xWQL8kH/secondP.jpg",
         "title": "Dentastix Oral Care Treats for Small Breed Adult Dogs",
         "price": "$11"
     },
     {
-        "image": "../src/images/thirdP.jpeg",
+        "image": "https://i.ibb.co/twCxYJ8p/thirdP.jpg",
         "title": "Meat Up Puppy Dry Dog Food, Chicken",
         "price": "$15 – $28"
     },
     {
-        "image": "../src/images/forthP.jpeg",
+        "image": "https://i.ibb.co/yB88Wcx4/forthP.jpg",
         "title": "Pets Empire Stainless Steel Dog Bowl (Set of 2)",
         "price": "$30"
     },
     {
-        "image": "../src/images/fifthP.jpeg",
+        "image": "https://i.ibb.co/sdN8FQ8g/fifthP.jpg",
         "title": "Mutt of Course Sniffing Around Bandana Small",
         "price": "$12"
     }
