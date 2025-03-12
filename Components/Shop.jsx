@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
 import { IoReorderThreeOutline } from "react-icons/io5";
 
+import ShopSecondLayer from "../Shop_Layer/ShopSecondLayer";
+
 
 const Shop = () => {
 
@@ -27,7 +29,6 @@ const Shop = () => {
         SetViweOpenCol(!viweOpenCol)
     }
 
-
     // data call 
     const [data, setData] = useState([]);
 
@@ -37,8 +38,6 @@ const Shop = () => {
             .then(data => setData(data)
             )
     }, [])
-
-
 
 
     return (
@@ -215,34 +214,7 @@ const Shop = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-6">
-                                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-                                    {data.map((product, i) => (
-                                        <div key={i}>
-                                            <div className="lg:w-58 lg:h-full h-88 md:h-78 lg:h-86  duration-200 lg:hover:scale-105 bg-white rounded-lg shadow-md overflow-hidden">
-                                                <div className="relative">
-                                                    <img src={product.image} alt="Stainless Steel Dog Bowl" className="lg:w-58 w-full  lg:h-58" />
-                                                    <div className="absolute top-2 left-2 bg-[#FA6C41] text-white text-xs font-bold p-2 rounded-full">
-                                                        14%
-                                                    </div>
-                                                </div>
-                                                <div className="p-4">
-                                                    <h3 className="font-medium text-sm mb-2">{product.title}</h3>
-                                                    <div className="flex items-center justify-between">
-                                                        <div className="flex items-center gap-2">
-                                                            <span className="text-gray-400 line-through">$37</span>
-                                                            <span className="text-[#FA6C41]   text-sm">$30</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    ))}
-                                </div>
-
-                            </div>
+                            <ShopSecondLayer></ShopSecondLayer>
                         </div>
                     </div>
                 </div>

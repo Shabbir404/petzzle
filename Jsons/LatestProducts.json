@@ -3,36 +3,42 @@
         "id": 1,
         "image": "https://i.ibb.co/jkNNjPXT/firstP.jpg",
         "title": "Pedigree Adult Dry Dog Food, 1kg Pack",
-        "price": "$12 – $38"
+        "price": "$12 – $38",
+        "description": "Complete & balanced dog food, perfect for adult dogs. It contains 20% crude Protein, 10% crude Fat, and 5% crude Fibre, providing strong muscles, bones & teeth, and a healthier & shinier coat."
     },
     {
         "id": 2,
         "image": "https://i.ibb.co/5xWQL8kH/secondP.jpg",
         "title": "Dentastix Oral Care Treats for Small Breed Adult Dogs",
-        "price": "$11"
+        "price": "$11",
+        "description": "These oral care treats are designed to clean your dog's teeth and freshen their breath, helping maintain good oral hygiene for small breed adult dogs."
     },
     {
         "id": 3,
         "image": "https://i.ibb.co/twCxYJ8p/thirdP.jpg",
         "title": "Meat Up Puppy Dry Dog Food, Chicken",
-        "price": "$15 – $28"
+        "price": "$15 – $28",
+        "description": "A specially formulated dry dog food made with chicken for puppies, providing essential nutrients for growth and development. It helps in building strong muscles and healthy bones, perfect for your growing pup."
     },
     {
         "id": 4,
         "image": "https://i.ibb.co/yB88Wcx4/forthP.jpg",
         "title": "Pets Empire Stainless Steel Dog Bowl (Set of 2)",
-        "price": "$30"
+        "price": "$30",
+        "description": "Durable and easy-to-clean stainless steel dog bowls, designed for comfort and convenience. This set of 2 bowls is ideal for serving food and water to your dog."
     },
     {
         "id": 5,
         "image": "https://i.ibb.co/sdN8FQ8g/fifthP.jpg",
         "title": "Mutt of Course Sniffing Around Bandana Small",
-        "price": "$12"
+        "price": "$12",
+        "description": "A stylish and comfortable bandana for small dogs. Perfect for adding a touch of fun and flair, while your dog explores the world around them."
     },
     {
         "id": 6,
         "image": "https://i.ibb.co/MDVnKjw6/1282a9676ef3ad3183aada66d495d493.jpg",
         "title": "Soft Front Dog Harness Reflective No Pull Harness",
-        "price": "$49"
+        "price": "$49",
+        "description": "A comfortable and adjustable no-pull harness for dogs, designed with reflective strips for increased visibility. Perfect for walks and ensuring comfort for your dog."
     }
 ]
