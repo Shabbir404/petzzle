@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
+import { data } from "react-router-dom";
 
 
 const Shop = () => {
@@ -25,6 +26,14 @@ const Shop = () => {
     const handleViweOpenCol = () => {
         SetViweOpenCol(!viweOpenCol)
     }
+
+
+    useEffect(() => {
+        fetch('https://raw.githubusercontent.com/Shabbir404/petzzle/refs/heads/main/Jsons/LatestProducts.json')
+            .then(res => res.json())
+            .then(data => console.log(data)
+            )
+    }, [])
 
     return (
         <div>
