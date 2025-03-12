@@ -1,30 +1,36 @@
 [
     {
+        "id": 1,
         "image": "https://i.ibb.co/jkNNjPXT/firstP.jpg",
         "title": "Pedigree Adult Dry Dog Food, 1kg Pack",
         "price": "$12 – $38"
     },
     {
+        "id": 2,
         "image": "https://i.ibb.co/5xWQL8kH/secondP.jpg",
         "title": "Dentastix Oral Care Treats for Small Breed Adult Dogs",
         "price": "$11"
     },
     {
+        "id": 3,
         "image": "https://i.ibb.co/twCxYJ8p/thirdP.jpg",
         "title": "Meat Up Puppy Dry Dog Food, Chicken",
         "price": "$15 – $28"
     },
     {
+        "id": 4,
         "image": "https://i.ibb.co/yB88Wcx4/forthP.jpg",
         "title": "Pets Empire Stainless Steel Dog Bowl (Set of 2)",
         "price": "$30"
     },
     {
+        "id": 5,
         "image": "https://i.ibb.co/sdN8FQ8g/fifthP.jpg",
         "title": "Mutt of Course Sniffing Around Bandana Small",
         "price": "$12"
     },
     {
+        "id": 6,
         "image": "https://i.ibb.co/MDVnKjw6/1282a9676ef3ad3183aada66d495d493.jpg",
         "title": "Soft Front Dog Harness Reflective No Pull Harness",
         "price": "$49"
