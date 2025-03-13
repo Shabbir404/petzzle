@@ -9,7 +9,8 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { FiShare2 } from "react-icons/fi";
 import { BsShieldFillCheck } from "react-icons/bs";
-
+import paymentPGN from '../src/images/payments.png'
+import AProduct from "./AProduct";
 
 
 const ProductDPage = () => {
@@ -58,7 +59,7 @@ const ProductDPage = () => {
                             <a className="hover:text-orange-600" href="/cold-weather-coats"> / Pedigree Adult Dry Dog Food, 1kg Pack</a>
                         </h1>
                     </div>
-                    <div className="w-10/12 mx-auto mt-10 md:flex gap-4" >
+                    <div className="w-11/12 md:w-10/12 mx-auto mt-10 md:flex gap-4" >
 
                         <div className="md:flex gap-4">
                             <div className="hidden md:block md:flex flex-col mt-11 gap-4">
@@ -226,8 +227,17 @@ const ProductDPage = () => {
                                     Free Shipping & Returns : On all orders over ${product.freeShippingThreshold}
                                 </div>
                             </div>
+
+                            <div className="bg-[#F5F5F5] hidden md:block  h-[94px]">
+                                <h1 className="font-semibold tracking-wide text-center pt-5">Guaranteed Safe And Secure Checkout</h1>
+                                <img className="h-[30px] mt-2 bottom-0 w-6/12 mx-auto" src={paymentPGN} alt="" />
+                            </div>
                         </div>
+
                     </div>
+                    {/* about product components*/}
+
+                    <AProduct></AProduct>
 
                 </div>
             ) : (
