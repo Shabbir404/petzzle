@@ -3,42 +3,138 @@
         "id": 1,
         "image": "https://i.ibb.co/jkNNjPXT/firstP.jpg",
         "title": "Pedigree Adult Dry Dog Food, 1kg Pack",
-        "price": "$12 – $38",
-        "description": "Complete & balanced dog food, perfect for adult dogs. It contains 20% crude Protein, 10% crude Fat, and 5% crude Fibre, providing strong muscles, bones & teeth, and a healthier & shinier coat."
+        "priceRange": {
+            "min": 12,
+            "max": 38
+        },
+        "reviewCount": 1,
+        "soldCount": 8,
+        "soldTimeframe": 7,
+        "description": "Complete & balanced dog food, perfect for adult dogs. It contains 20% crude Protein, 10% crude Fat, and 5% crude Fibre, providing strong muscles, bones & teeth, and a healthier & shinier coat.",
+        "weightOptions": [
+            "250g",
+            "500g",
+            "1kg"
+        ],
+        "selectedWeight": "250g",
+        "price": 12,
+        "stock": 422,
+        "deliveryDays": 4,
+        "freeShippingThreshold": 200,
+        "viewerCount": 22
     },
     {
         "id": 2,
         "image": "https://i.ibb.co/5xWQL8kH/secondP.jpg",
         "title": "Dentastix Oral Care Treats for Small Breed Adult Dogs",
-        "price": "$11",
-        "description": "These oral care treats are designed to clean your dog's teeth and freshen their breath, helping maintain good oral hygiene for small breed adult dogs."
+        "priceRange": {
+            "min": 11,
+            "max": 11
+        },
+        "reviewCount": 0,
+        "soldCount": 0,
+        "soldTimeframe": 0,
+        "description": "These oral care treats are designed to clean your dog's teeth and freshen their breath, helping maintain good oral hygiene for small breed adult dogs.",
+        "weightOptions": [
+            "1 pack"
+        ],
+        "selectedWeight": "1 pack",
+        "price": 11,
+        "stock": 100,
+        "deliveryDays": 3,
+        "freeShippingThreshold": 50,
+        "viewerCount": 5
     },
     {
         "id": 3,
         "image": "https://i.ibb.co/twCxYJ8p/thirdP.jpg",
         "title": "Meat Up Puppy Dry Dog Food, Chicken",
-        "price": "$15 – $28",
-        "description": "A specially formulated dry dog food made with chicken for puppies, providing essential nutrients for growth and development. It helps in building strong muscles and healthy bones, perfect for your growing pup."
+        "priceRange": {
+            "min": 15,
+            "max": 28
+        },
+        "reviewCount": 0,
+        "soldCount": 0,
+        "soldTimeframe": 0,
+        "description": "A specially formulated dry dog food made with chicken for puppies, providing essential nutrients for growth and development. It helps in building strong muscles and healthy bones, perfect for your growing pup.",
+        "weightOptions": [
+            "500g",
+            "1kg",
+            "2kg"
+        ],
+        "selectedWeight": "500g",
+        "price": 15,
+        "stock": 150,
+        "deliveryDays": 5,
+        "freeShippingThreshold": 100,
+        "viewerCount": 10
     },
     {
         "id": 4,
         "image": "https://i.ibb.co/yB88Wcx4/forthP.jpg",
         "title": "Pets Empire Stainless Steel Dog Bowl (Set of 2)",
-        "price": "$30",
-        "description": "Durable and easy-to-clean stainless steel dog bowls, designed for comfort and convenience. This set of 2 bowls is ideal for serving food and water to your dog."
+        "priceRange": {
+            "min": 30,
+            "max": 30
+        },
+        "reviewCount": 0,
+        "soldCount": 5,
+        "soldTimeframe": 14,
+        "description": "Durable and easy-to-clean stainless steel dog bowls, designed for comfort and convenience. This set of 2 bowls is ideal for serving food and water to your dog.",
+        "weightOptions": [
+            "set of 2"
+        ],
+        "selectedWeight": "set of 2",
+        "price": 30,
+        "stock": 50,
+        "deliveryDays": 7,
+        "freeShippingThreshold": 150,
+        "viewerCount": 8
     },
     {
         "id": 5,
         "image": "https://i.ibb.co/sdN8FQ8g/fifthP.jpg",
         "title": "Mutt of Course Sniffing Around Bandana Small",
-        "price": "$12",
-        "description": "A stylish and comfortable bandana for small dogs. Perfect for adding a touch of fun and flair, while your dog explores the world around them."
+        "priceRange": {
+            "min": 12,
+            "max": 12
+        },
+        "reviewCount": 0,
+        "soldCount": 10,
+        "soldTimeframe": 10,
+        "description": "A stylish and comfortable bandana for small dogs. Perfect for adding a touch of fun and flair, while your dog explores the world around them.",
+        "weightOptions": [
+            "Small"
+        ],
+        "selectedWeight": "Small",
+        "price": 12,
+        "stock": 25,
+        "deliveryDays": 3,
+        "freeShippingThreshold": 50,
+        "viewerCount": 15
     },
     {
         "id": 6,
         "image": "https://i.ibb.co/MDVnKjw6/1282a9676ef3ad3183aada66d495d493.jpg",
         "title": "Soft Front Dog Harness Reflective No Pull Harness",
-        "price": "$49",
-        "description": "A comfortable and adjustable no-pull harness for dogs, designed with reflective strips for increased visibility. Perfect for walks and ensuring comfort for your dog."
+        "priceRange": {
+            "min": 49,
+            "max": 49
+        },
+        "reviewCount": 0,
+        "soldCount": 0,
+        "soldTimeframe": 0,
+        "description": "A comfortable and adjustable no-pull harness for dogs, designed with reflective strips for increased visibility. Perfect for walks and ensuring comfort for your dog.",
+        "weightOptions": [
+            "Small",
+            "Medium",
+            "Large"
+        ],
+        "selectedWeight": "Medium",
+        "price": 49,
+        "stock": 30,
+        "deliveryDays": 6,
+        "freeShippingThreshold": 100,
+        "viewerCount": 12
     }
 ]
