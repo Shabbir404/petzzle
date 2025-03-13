@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import aboutPpng from '../src/images/addP1.jpeg'
 import aboutPpng1 from '../src/images/addp2.jpeg'
 import aboutPpng2 from '../src/images/addP3.jpeg'
@@ -67,18 +68,31 @@ const getButtonClass = (actionType) => {
 
 
 const MoreProducts = () => {
+
+
+    const [allProducts, setAllProfucts] = useState([]);
+
+    useEffect(() => {
+
+        fetch('https://raw.githubusercontent.com/Shabbir404/petzzle/refs/heads/main/Jsons/LatestProducts.json')
+            .then(res => res.json())
+            .then(data => setAllProfucts(data)
+            )
+
+    }, [])
+
     return (
         <div>
             <div className="w-full md:w-11/12 lg:w-10/12 mx-auto p-4 bg-gray-50 overflow-x-auto">
                 <h2 className="text-2xl font-bold text-center mb-6">Quick Comparison</h2>
 
                 {/* Mobile View - Card based layout */}
-                <div className="md:hidden grid grid-cols-2 gap-3 space-y-8">
+                <div className="md:hidden grid grid-cols-1 gap-3 space-y-8">
                     {products.map((product, index) => (
                         <div key={`product-card-${index}`} className="bg-white rounded-lg shadow p-4">
                             <h3 className="font-bold   mb-2 text-center">{product.name}</h3>
                             <div className="flex justify-center mb-4">
-                                <img src={product.image} alt={product.name} className="rounded-2xl h-40 object-contain" />
+                                <img src={product.image} alt={product.name} className="rounded-2xl h-ful object-contain" />
                             </div>
 
                             <div className="space-y-2">
@@ -175,6 +189,34 @@ const MoreProducts = () => {
                         ))}
                     </div>
                 </div>
+
+                <div>
+                    <div>
+                        <h1 className='text-2xl font-extrabold text-center mt-10'>Related products</h1>
+                    </div>
+
+                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-10 mb-10 mx-auto px-4">
+                        {allProducts.map((product, i) => (
+                            <div key={i} className="p-4 w-full max-w-[247.59px] mx-auto hover:scale-105 duration-200 cursor-pointer">
+                                {/* Image */}
+                                <img
+                                    src={product.image}
+                                    alt=""
+                                    className="w-full h-auto  md:mt-8 object-cover md:rounded-none rounded-md"
+                                />
+
+                                {/* Title */}
+                                <h1 className="font-semibold mt-4 text-center md:text-start text-lg">{product.title}</h1>
+
+                                {/* Price */}
+                                <div className="mt-4 text-center md:text-start md:mt-10">
+                                    <span className="text-[#FA6C41]">{product.price}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
             </div>
         </div>
     );
